@@ -1,0 +1,46 @@
+{
+  "name": "optiglow",
+  "version": "1.0.0",
+  "description": "Adaptive screen brightness based on content luminance",
+  "main": "out/main/index.js",
+  "scripts": {
+    "dev": "electron-vite dev",
+    "build": "electron-vite build",
+    "preview": "electron-vite preview",
+    "package": "npm run build && electron-builder",
+    "package:exe": "npm run build && electron-builder --win nsis",
+    "package:store": "npm run build && electron-builder --win appx",
+    "rebuild": "electron-rebuild -f -w node-ddcci"
+  },
+  "keywords": ["electron", "brightness", "adaptive", "screen"],
+  "author": "OptiGlow",
+  "license": "MIT",
+  "devDependencies": {
+    "@electron/rebuild": "^3.6.0",
+    "@types/node": "^20.0.0",
+    "@types/react": "^18.0.0",
+    "@types/react-dom": "^18.0.0",
+    "@vitejs/plugin-react": "^4.0.0",
+    "autoprefixer": "^10.4.0",
+    "concurrently": "^8.0.0",
+    "cross-env": "^7.0.0",
+    "electron": "^30.0.0",
+    "electron-builder": "^24.0.0",
+    "electron-vite": "^2.0.0",
+    "postcss": "^8.4.0",
+    "tailwindcss": "^3.4.0",
+    "ts-node": "^10.9.0",
+    "typescript": "^5.0.0",
+    "vite": "^5.0.0",
+    "wait-on": "^7.0.0"
+  },
+  "dependencies": {
+    "electron-updater": "^6.1.0",
+    "node-ddcci": "github:hensm/node-ddcci",
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0"
+  },
+  "build": {
+    "npmRebuild": true
+  }
+}
